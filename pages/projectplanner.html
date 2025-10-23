@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Planner | Verdant Haven</title>
+    <meta name="description" content="Plan your next gardening or DIY project with our interactive Project Planner. Organize your ideas, budget, materials, and steps all in one place.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/extras.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">
+                <span class="header__logo-icon">🌿</span>
+                <span class="header__logo-text">Verdant Haven</span>
+            </a>
+            <button id="menu-toggle" class="header__menu-button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation"><span>☰</span></button>
+            <nav id="main-nav" class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="../index.html" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="./gardening.html" class="header__nav-link">Gardening</a></li>
+                    <li class="header__nav-item"><a href="./diy-projects.html" class="header__nav-link">DIY Projects</a></li>
+                    <li class="header__nav-item"><a href="./home-decor.html" class="header__nav-link">Home Decor</a></li>
+                    <li class="header__nav-item"><a href="./about.html" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="./contact.html" class="header__nav-link">Contact</a></li>
+                    <li class="header__nav-item"><a href="./community.html" class="header__nav-link">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Project Planner -->
+    <main class="page-content">
+        <section class="content-header">
+            <div class="content-header__container">
+                <h1 class="content-header__title">DIY & Garden Project Planner</h1>
+                <p class="content-header__subtitle">A little planning goes a long way. Organize your next project from start to finish.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="content-section__container planner-layout">
+                <form class="planner-form">
+                    <fieldset class="planner-form__fieldset">
+                        <legend class="planner-form__legend">1. Project Overview</legend>
+                        <div class="planner-form__group">
+                            <label for="project-name" class="planner-form__label">Project Name</label>
+                            <input type="text" id="project-name" class="planner-form__input" placeholder="e.g., Raised Garden Bed">
+                        </div>
+                        <div class="planner-form__group">
+                            <label for="project-description" class="planner-form__label">Brief Description & Goals</label>
+                            <textarea id="project-description" class="planner-form__textarea" rows="4" placeholder="e.g., Build a 4x8 ft raised bed for growing vegetables. Goal is to have it ready for spring planting."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="planner-form__fieldset">
+                        <legend class="planner-form__legend">2. Materials & Budget</legend>
+                        <div class="planner-form__group">
+                            <label for="materials-list" class="planner-form__label">Materials & Tools Needed</label>
+                            <textarea id="materials-list" class="planner-form__textarea" rows="6" placeholder="e.g., - 8x cedar boards (2x6x8)&#10;- Deck screws&#10;- Drill&#10;- Saw&#10;- Tape measure"></textarea>
+                        </div>
+                        <div class="planner-form__group">
+                            <label for="project-budget" class="planner-form__label">Estimated Budget ($)</label>
+                            <input type="number" id="project-budget" class="planner-form__input" placeholder="e.g., 150">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="planner-form__fieldset">
+                        <legend class="planner-form__legend">3. Step-by-Step Plan</legend>
+                        <div class="planner-form__group">
+                            <label for="project-steps" class="planner-form__label">Action Steps</label>
+                            <textarea id="project-steps" class="planner-form__textarea" rows="8" placeholder="e.g., 1. Purchase lumber and screws.&#10;2. Cut boards to size.&#10;3. Assemble the frame.&#10;4. Position in the yard.&#10;5. Fill with soil."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="planner-form__actions">
+                        <button type="button" class="planner-form__button planner-form__button--primary" onclick="window.print()">Print Plan</button>
+                        <button type="reset" class="planner-form__button">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__section">
+                <div class="footer__logo">
+                    <span class="footer__logo-text">Verdant Haven</span>
+                </div>
+                <p class="footer__description">Creating beautiful, sustainable living spaces that connect you with nature.</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__heading">Explore</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="../index.html" class="footer__link">Home</a></li>
+                    <li class="footer__list-item"><a href="./gardening.html" class="footer__link">Gardening</a></li>
+                    <li class="footer__list-item"><a href="./diy-projects.html" class="footer__link">DIY Projects</a></li>
+                    <li class="footer__list-item"><a href="./home-decor.html" class="footer__link">Home Decor</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__heading">Resources</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="./beginnerguides.html" class="footer__link">Beginner Guides</a></li>
+                    <li class="footer__list-item"><a href="./seasonaltips.html" class="footer__link">Seasonal Tips</a></li>
+                    <li class="footer__list-item"><a href="./projectplanner.html" class="footer__link">Project Planner</a></li>
+                    <li class="footer__list-item"><a href="./forum.html" class="footer__link">Community Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__heading">Connect</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="./about.html" class="footer__link">About Us</a></li>
+                    <li class="footer__list-item"><a href="./contact.html" class="footer__link">Contact</a></li>
+                    <li class="footer__list-item"><a href="./newsletter.html" class="footer__link">Newsletter</a></li>
+                    <li class="footer__list-item"><a href="./community.html" class="footer__link">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; 2025 Verdant Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
