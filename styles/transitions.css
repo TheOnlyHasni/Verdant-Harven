@@ -1,0 +1,25 @@
+/*
+ * Smooth Loading & Transitions
+ * Prevents layout shift and provides a graceful fade-in for JS-injected content.
+ */
+
+/* Pre-allocate space to prevent content jumping */
+#header-placeholder {
+    min-height: 64px; /* Matches the header height from responsive.css */
+}
+
+#footer-placeholder {
+    min-height: 300px; /* An approximate height for the footer */
+}
+
+/* Style for the fade-in effect */
+#header-placeholder,
+#footer-placeholder {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#header-placeholder.loaded,
+#footer-placeholder.loaded {
+    opacity: 1;
+}

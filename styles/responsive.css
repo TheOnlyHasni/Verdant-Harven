@@ -1,0 +1,201 @@
+/* Responsive overrides (mobile-first)
+   Loaded last in pages to take priority.
+   - Provide mobile nav (hamburger) behavior styles
+   - Responsive grids and images
+   - Utility spacing and typography adjustments
+*/
+
+:root{
+    --site-max-width:1200px;
+    --container-padding:16px;
+    --header-height:64px;
+}
+
+/* Global resets for responsive behavior */
+img, video, iframe {
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.container, .header__container, .hero__container, .welcome__container, .features__container,
+.page-hero__container, .our-story__container, .team__container, .impact__container, .values__container,
+.cta__container, .footer__container {
+    max-width:var(--site-max-width);
+    margin:0 auto;
+    padding:0 var(--container-padding);
+    box-sizing:border-box;
+}
+
+/* Mobile first: stack header elements */
+.header{
+    position:relative;
+}
+.header__container{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:12px;
+    height:var(--header-height);
+}
+
+/* Hide default nav by default, show via .is-active */
+.header__nav{
+    position:absolute;
+    top:var(--header-height);
+    left:0;
+    right:0;
+    background:var(--primary-green, #2d5a3b);
+    border-top:1px solid rgba(0,0,0,0.06);
+    transform-origin:top;
+    box-shadow:0 8px 24px rgba(0,0,0,0.06);
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 280ms ease, opacity 200ms ease;
+    opacity:0;
+    z-index:50;
+}
+.header__nav.is-active{
+    max-height:420px; /* enough for nav links */
+    opacity:1;
+}
+
+.header__nav-list{
+    list-style:none;
+    margin:0;
+    padding:12px 16px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.header__nav-link{
+    display:block;
+    padding:8px 12px;
+    border-radius:6px;
+}
+
+/* Menu toggle button styles */
+.header__menu-button{
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    border: 2px solid var(--secondary-green);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.header__menu-button:hover {
+    background-color: var(--secondary-green);
+    color: var(--text-light);
+}
+
+.header__menu-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(122, 169, 130, 0.25);
+}
+
+/* Larger viewports: horizontal nav */
+@media (min-width: 769px){
+    .header__menu-button{ display:none; }
+    .header__nav{
+        position:static;
+        max-height:none;
+        opacity:1;
+        background:transparent;
+        box-shadow:none;
+        border-top:0;
+    }
+    .header__nav-list{
+        flex-direction:row;
+        gap:18px;
+        padding:0;
+    }
+    .header__nav-link{ padding:6px 0; }
+    .header__nav-link.header__nav-link--active{
+        font-weight:600;
+        text-decoration:none;
+    }
+}
+
+/* Responsive content grids */
+.features__grid, .our-mission__grid, .team__grid, .values__grid, .impact__stats{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+}
+@media (min-width:600px){
+    .features__grid{ grid-template-columns:repeat(2, 1fr); }
+    .our-mission__grid{ grid-template-columns:repeat(2, 1fr); }
+    .team__grid{ grid-template-columns:repeat(2, 1fr); }
+    .values__grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (min-width:1000px){
+    .features__grid{ grid-template-columns:repeat(3, 1fr); }
+    .team__grid{ grid-template-columns:repeat(3, 1fr); }
+    .our-mission__grid{ grid-template-columns:repeat(4, 1fr); }
+}
+
+/* Hero adjustments */
+.hero__container, .page-hero__container{ padding-top:32px; padding-bottom:32px; }
+.hero__title{ font-size:28px; }
+@media (min-width:769px){
+    .hero__title{ font-size:40px; }
+}
+
+/* Utility spacing for sections */
+section{ padding:28px 0; }
+
+/* Footer stacked on mobile */
+.footer__container{ display:grid; grid-template-columns:1fr; gap:18px; }
+@media (min-width:900px){
+    .footer__container{ grid-template-columns:repeat(5,1fr); }
+}
+
+/* Make forms and buttons responsive */
+.contact-cta__actions{ display:flex; flex-direction:column; gap:10px; }
+@media (min-width:600px){
+    .contact-cta__actions{ flex-direction:row; }
+}
+
+/* Responsive adjustments for two-column image/text layouts */
+@media (max-width: 900px) {
+    .welcome__container,
+    .our-story__container,
+    .spotlight__container,
+    .diy-intro__container,
+    .decor-intro__container,
+    .tools-section__content,
+    .seasonal-decor__content,
+    .signup__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Reverse order for some sections to keep image-text flow logical */
+    .diy-intro__image, .decor-intro__image, .signup__image {
+        grid-row: 1;
+    }
+}
+
+/* Prevent large tables or preformatted text overflowing */
+table, pre{ max-width:100%; overflow:auto; }
+
+/* Minor accessible focus styles */
+a:focus, button:focus{ outline:none; }
+
+/* Adjustments for long navs on mobile */
+.header__nav-list{ max-height:60vh; overflow:auto; }
+
+/* Small tweaks for images in article grids */
+.team-member__img, .our-story__img{ border-radius:8px; width:100%; height:auto; }
+
+/* Utility: hide elements on mobile if needed */
+.hide-mobile{ display:none !important; }
+@media (min-width:769px){ .hide-mobile{ display:initial !important; } }
+
+/* Ensure the responsive file overrides earlier styles */
+/* No important flags used except where necessary (hide-mobile). */

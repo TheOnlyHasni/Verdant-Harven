@@ -1,0 +1,477 @@
+/* Home Decor Page Specific Styles */
+
+/* Page Hero Section */
+.page-hero--decor {
+    background: linear-gradient(rgba(45, 90, 59, 0.85), rgba(45, 90, 59, 0.85)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+}
+
+/* Decor Intro Section */
+.decor-intro {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+}
+
+.decor-intro__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.decor-intro__content {
+    padding-right: var(--spacing-lg);
+}
+
+.decor-intro__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.decor-intro__text {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.decor-intro__features {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.decor-intro__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.decor-intro__feature-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.decor-intro__feature-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-green);
+}
+
+.decor-intro__image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.decor-intro__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Design Styles Section */
+.design-styles {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--accent-beige);
+}
+
+.design-styles__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.design-styles__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xl);
+}
+
+.design-styles__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Style Card Component */
+.style-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    height: 320px;
+    display: flex;
+    align-items: flex-end;
+    transition: var(--transition);
+}
+
+.style-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.style-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+    z-index: 1;
+}
+
+.style-card--minimalist {
+    background: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+}
+
+.style-card--bohemian {
+    background: url('https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+}
+
+.style-card--modern {
+    background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+}
+
+.style-card--coastal {
+    background: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+}
+
+.style-card__content {
+    position: relative;
+    z-index: 2;
+    padding: var(--spacing-lg);
+    color: var(--text-light);
+    width: 100%;
+}
+
+.style-card__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-light);
+}
+
+.style-card__description {
+    margin-bottom: var(--spacing-md);
+    opacity: 0.9;
+}
+
+.style-card__list {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-md);
+}
+
+.style-card__list-item {
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+.style-card__list-item::before {
+    content: '•';
+    color: var(--accent-beige);
+    font-weight: bold;
+    position: absolute;
+    left: -1rem;
+}
+
+.style-card__link {
+    display: inline-block;
+    background-color: var(--accent-beige);
+    color: var(--primary-green);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.style-card__link:hover {
+    background-color: var(--text-light);
+    transform: translateX(5px);
+}
+
+/* Room Makeovers Section */
+.room-makeovers {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+}
+
+.room-makeovers__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.room-makeovers__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xl);
+}
+
+.room-makeovers__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Room Card Component */
+.room-card {
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.room-card__image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.room-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.room-card:hover .room-card__img {
+    transform: scale(1.05);
+}
+
+.room-card__content {
+    padding: var(--spacing-lg);
+}
+
+.room-card__title {
+    font-size: 1.4rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.room-card__description {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.room-card__tips {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--accent-beige);
+    border-radius: var(--border-radius);
+}
+
+.room-card__tip {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card__tip-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 0.25rem;
+}
+
+.room-card__tip-text {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.room-card__link {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    text-align: center;
+    width: 100%;
+}
+
+.room-card__link:hover {
+    background-color: var(--secondary-green);
+}
+
+/* Seasonal Decor Section */
+.seasonal-decor {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--accent-beige);
+}
+
+.seasonal-decor__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seasonal-decor__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xl);
+}
+
+.seasonal-decor__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.seasonal-decor__subtitle {
+    font-size: 1.8rem;
+    color: var(--secondary-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.seasonal-decor__description {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.seasonal-decor__ideas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.seasonal-decor__idea {
+    padding: var(--spacing-md);
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.seasonal-decor__idea-title {
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.seasonal-decor__idea-text {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.seasonal-decor__image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.seasonal-decor__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Budget Tips Section */
+.budget-tips {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+}
+
+.budget-tips__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.budget-tips__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xl);
+}
+
+.budget-tips__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.budget-tip {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--accent-beige);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.budget-tip:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.budget-tip__icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.budget-tip__title {
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.budget-tip__text {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Responsive Design for Home Decor Page */
+@media (max-width: 768px) {
+    .decor-intro__container,
+    .seasonal-decor__content {
+        grid-template-columns: 1fr;
+    }
+    
+    .decor-intro__content {
+        padding-right: 0;
+    }
+    
+    .decor-intro__features {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .design-styles__grid,
+    .room-makeovers__grid,
+    .budget-tips__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .seasonal-decor__ideas {
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .decor-intro__title,
+    .design-styles__title,
+    .room-makeovers__title,
+    .seasonal-decor__title,
+    .budget-tips__title {
+        font-size: 2rem;
+    }
+    
+    .style-card {
+        height: 280px;
+    }
+}

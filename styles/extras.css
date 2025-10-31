@@ -1,0 +1,420 @@
+/* ============================================= */
+/* ==      Generic Content Page Styles        == */
+/* ============================================= */
+
+.page-content {
+    background-color: #fdfdfd;
+}
+
+.content-header {
+    background-color: #f4f6f3; /* A soft, earthy green */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.content-header__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-header__title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.content-header__subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+}
+
+.content-section {
+    padding: 4rem 2rem;
+}
+
+.content-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================================= */
+/* ==           Card Grid Styles              == */
+/* ============================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card__content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+.card__text {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.card__link {
+    color: var(--color-accent);
+    font-weight: bold;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+/* Tool Review Card Specifics */
+.review-card__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.review-card__stars {
+    color: #f5b700; /* Gold color for stars */
+    font-size: 1.2rem;
+}
+
+/* ============================================= */
+/* ==           Article Layout Styles         == */
+/* ============================================= */
+
+.article-layout {
+    max-width: 800px;
+}
+
+.article-image {
+    width: 100%;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.article-list {
+    padding-left: 20px;
+    margin: 1.5rem 0;
+}
+
+.article-list li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.article-spacing-top {
+    margin-top: 3rem;
+}
+
+/* ============================================= */
+/* ==        Project Planner Styles           == */
+/* ============================================= */
+
+.planner-layout {
+    max-width: 800px;
+}
+
+.planner-form__fieldset {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.planner-form__legend {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 0 0.5rem;
+    margin-left: 1rem;
+}
+
+.planner-form__group {
+    margin-bottom: 1.5rem;
+}
+
+.planner-form__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+.planner-form__input,
+.planner-form__textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.planner-form__input:focus,
+.planner-form__textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.2);
+}
+
+.planner-form__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.planner-form__button {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.planner-form__button:hover {
+    background-color: #e0e0e0;
+}
+
+.planner-form__button--primary {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.planner-form__button--primary:hover {
+    background-color: var(--color-secondary);
+}
+
+/* ============================================= */
+/* ==             Forum Styles                == */
+/* ============================================= */
+
+.forum-layout {
+    max-width: 1000px;
+}
+
+.forum-actions {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.forum-actions__button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--color-primary);
+    transition: all 0.2s ease;
+}
+
+.forum-actions__button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.forum-topic {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.forum-topic:first-of-type {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.forum-topic:last-of-type {
+    border-bottom: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.forum-topic__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.forum-topic__title:hover {
+    text-decoration: underline;
+}
+
+.forum-topic__meta, .forum-topic__activity p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.forum-topic__author, .forum-topic__category {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forum-topic__stats, .forum-topic__activity {
+    text-align: right;
+}
+
+.forum-topic__stat {
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* ============================================= */
+/* ==       Material Calculator Styles        == */
+/* ============================================= */
+
+.calculator-layout {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 768px) {
+    .calculator-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.calculator-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-form__label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+.calculator-form__input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.calculator-form__button {
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: white;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.calculator-form__button:hover {
+    background-color: var(--color-secondary);
+}
+
+.calculator-result {
+    background-color: #f4f6f3;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.calculator-result__title {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.calculator-result__text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+/* ============================================= */
+/* ==         Problem Solver Styles           == */
+/* ============================================= */
+
+.problem-solver-layout {
+    max-width: 800px;
+}
+
+.problem-solver__item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.problem-solver__item[open] {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.problem-solver__question {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.problem-solver__answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    line-height: 1.7;
+}
+
+.problem-solver__answer ul {
+    padding-left: 20px;
+    margin-top: 1rem;
+}

@@ -1,0 +1,206 @@
+/* Newsletter Page Specific Styles */
+
+/* Page Hero Section */
+.page-hero--newsletter {
+    background: linear-gradient(rgba(45, 90, 59, 0.85), rgba(45, 90, 59, 0.85)), url('https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
+}
+
+/* Signup Section */
+.signup {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+}
+
+.signup__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.signup__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.signup__text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.signup__image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.signup__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Signup Form */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.signup-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form__label {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-green);
+}
+
+.signup-form__input {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.signup-form__input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 5px rgba(45, 90, 59, 0.5);
+}
+
+.signup-form__button {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    border: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    align-self: flex-start;
+}
+
+.signup-form__button:hover {
+    background-color: var(--secondary-green);
+    transform: translateY(-2px);
+}
+
+.signup__privacy {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--accent-beige);
+}
+
+.benefits__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefits__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xl);
+}
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.benefit-card {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card__icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.benefit-card__title {
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-card__text {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+}
+
+.testimonials__container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonials__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xl);
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.testimonial-card {
+    background-color: var(--accent-beige);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--primary-green);
+}
+
+.testimonial-card__text {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+}
+
+.testimonial-card__author {
+    font-weight: 600;
+    color: var(--secondary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup__container,
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+}

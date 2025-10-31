@@ -1,0 +1,205 @@
+/* Beginner Guides Page Specific Styles */
+
+/* Page Hero Section */
+.page-hero--guides {
+    background: linear-gradient(rgba(45, 90, 59, 0.85), rgba(45, 90, 59, 0.85)), url('https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
+}
+
+/* Guides Intro Section */
+.guides-intro {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+    text-align: center;
+}
+
+.guides-intro__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.guides-intro__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.guides-intro__text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Guides Section */
+.guides-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.guides-section--alt {
+    background-color: var(--accent-beige);
+}
+
+.guides-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guides-section__header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.guides-section__icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--spacing-md);
+}
+
+.guides-section__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.guides-section__subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--secondary-green);
+}
+
+.guides-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Guide Card Component */
+.guide-card {
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.guide-card__link {
+    background-color: var(--text-light);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.guide-card__link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--text-light);
+}
+
+.guide-card__image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.guide-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.guide-card:hover .guide-card__image {
+    transform: scale(1.05);
+}
+
+.guide-card__content {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows content to fill space */
+}
+
+.guide-card__title {
+    font-size: 1.4rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.guide-card__text {
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1; /* Pushes the CTA down */
+    line-height: 1.6;
+}
+
+.guide-card__cta {
+    display: inline-block;
+    align-self: flex-start;
+    font-weight: 600;
+    color: var(--secondary-green);
+    text-decoration: none;
+    position: relative;
+}
+
+.guide-card__cta::after {
+    content: '→';
+    margin-left: var(--spacing-sm);
+    transition: margin-left 0.2s;
+}
+
+.guide-card:hover .guide-card__cta::after {
+    margin-left: 1rem;
+}
+
+/* Next Steps CTA Section */
+.next-steps-cta {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.next-steps-cta__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.next-steps-cta__title {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.next-steps-cta__text {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.next-steps-cta__button {
+    display: inline-block;
+    background-color: var(--accent-beige);
+    color: var(--primary-green);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.next-steps-cta__button:hover {
+    background-color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guides-section__grid {
+        grid-template-columns: 1fr;
+    }
+}
