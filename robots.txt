@@ -1,0 +1,9 @@
+# Allow Google AdSense crawler to access the site
+User-agent: Mediapartners-Google
+Allow: /
+
+# Allow all other crawlers to access the entire site
+User-agent: *
+Allow: /
+
+Sitemap: https://verdant-haven.com/pages/sitemap.html
