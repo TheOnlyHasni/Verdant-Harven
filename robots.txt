@@ -6,4 +6,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://verdant-haven.com/pages/sitemap.html
+Sitemap: https://value1.shop/pages/sitemap.html
+
